@@ -53,3 +53,5 @@ Project Coordinator and Lead R: Ronny Litvack-Katzman
 Research Assistant (Data Analysis): Lillian Simons
 Research Assistant (Researcher, Narrative Design): Rosalia Poplawski
 Research Assistant (Researcher, Graphic Design): Bianca Tri</p>
+
+<p>This project is funded by the Social Sciences and Humanities Research Council of Canada.</p>
