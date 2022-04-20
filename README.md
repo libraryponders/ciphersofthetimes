@@ -47,9 +47,9 @@
 <p></p>
 <p>This project is an ongoing effort conducted by students and library staff at McGill University Library.</p>
 
-<p>Principal Investigator: Professor Nathalie Cooke</p>
-<p>Project Manager and Lead Python: Leehu Sigler</p>
-<p>Project Coordinator and Lead R: Ronny Litvack-Katzman</p>
-<p>Research Assistant (Data Analysis): Lillian Simons</p>
-<p>Research Assistant (Researcher, Narrative Design): Rosalia Poplawski</p>
-<p>Research Assistant (Researcher, Graphic Design): Bianca Tri</p>
+<p>Principal Investigator: Professor Nathalie Cooke
+Project Manager and Lead Python: Leehu Sigler
+Project Coordinator and Lead R: Ronny Litvack-Katzman
+Research Assistant (Data Analysis): Lillian Simons
+Research Assistant (Researcher, Narrative Design): Rosalia Poplawski
+Research Assistant (Researcher, Graphic Design): Bianca Tri</p>
