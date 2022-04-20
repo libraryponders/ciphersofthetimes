@@ -4,16 +4,36 @@
 <p>This GitHub repository contains the code and data used throughout our research project, and serves as the basis for an upcoming exhibition on the subject housed at McGill University Library.</p>
 <p>Our repository file structure:</p>
 <pre class="chroma" tabindex="0"><code class="language-markdown" data-lang="markdown">
+
+├── README.md
 ├── assets
-│   ├── all_characters_and_numbers_to_exclude.txt
-│   ├── characters_and_numbers_to_exclude.txt
-│   ├── stopall.txt
-│   ├── stopnames.txt<br />│   ├── stopwords.txt
+│   ├── all_characters_and_numbers_to_exclude.txt
+│   ├── characters_and_numbers_to_exclude.txt
+│   ├── stopall.txt
+│   ├── stopnames.txt
+│   └── stopwords.txt
 ├── data
-│   ├── corpora
-│   │   ├── <span class="ge">corpus_newspaper_novels<br />│   │       ├── *all_project_novels_as_txt_files</span>
-│   ├── spreadsheets<br />│   │   ├── <span class="ge">df_nnovels_meta.csv<br /></span>│   │   ├── <span class="ge">df_txtlab_meta.csv<br />│   │   ├── df_nnovels_full.csv**<br />│   │   ├── df_txtlab_full.csv**<br />│   │   ├── df_nnovels_meta.csv<br />│   │   ├── nnovels_corpus_metadata.csv<br /></span><span class="ge">│   │   ├── clean_text_nnovels_for_tm.csv<br />│   │   ├── clean_text_nnovels_for_tm_filtered.csv</span>
+│   ├── corpora
+│   │   └── corpus_newspaper_novels
+│   │       └── *all_newspaper_novels_as_text_files
+│   └── spreadsheets
+│       ├── clean_text_nnovels_for_tm.csv
+│       ├── clean_text_nnovels_for_tm_filtered.csv
+│       ├── df_nnovels_meta.csv
+│       ├── df_txtlab_meta.csv
+│       ├── final_texts_for_TM.csv
+│       └── nnovels_corpus_metadata.csv
 ├── notebooks
-├── output
-└── .gitignore</code></pre>
-<p></p>
+│   ├── newspapers-analysis
+│   │   └── XMLnewspaperparser-2022-02-02.ipynb
+│   └── novels-analysis
+│       ├── Newpaper_Novels_Topic_Modeling_master.ipynb
+│       ├── Newspaper_Novels_Project_Notebook.ipynb
+│       ├── Newspaper_Novels_Visalizations.ipynb
+│       └── Newspaper_Novels_and_Victorian_Novels_Output_Analysis copy.R
+│       
+└── output
+    ├── Newspaper-Novels-and-txtLAB-comparisons-2022-03-15.docx
+    └── lda-output-2022-03-23
+        └── *all_lda_output_files
+</code>
