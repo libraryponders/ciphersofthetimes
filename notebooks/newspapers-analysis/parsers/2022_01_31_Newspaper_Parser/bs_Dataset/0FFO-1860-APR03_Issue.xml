@@ -1,0 +1,1531 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE issue SYSTEM "TDMIssue.dtd">
+<issue>
+	<metadataInfo>
+		<newspaperID>TDAO0001</newspaperID>
+		<mcode>0FFO</mcode>
+		<assetID>cs38531</assetID>
+		<dviCollectionID>TDAOC0001</dviCollectionID>
+		<ocr>61.77</ocr>
+		<language ocr="English" primary="Y">English</language>
+		<sourceLibrary>
+			<libraryName>Times Newspapers Limited</libraryName>
+			<libraryLocation>London, United Kingdom</libraryLocation>
+			<copyrightStatement>© Times Newspapers Limited</copyrightStatement>
+		</sourceLibrary>
+		<PSMID>0FFO-1860-APR03</PSMID>
+		<is>23584</is>
+		<da>
+			<year>1860</year>
+			<month>April</month>
+			<day>3</day>
+			<composed>April 3, 1860</composed>
+			<searchableDateStart>18600403</searchableDateStart>
+		</da>
+		<ip>16</ip>
+	</metadataInfo>
+	<page>
+		<pa>1</pa>
+		<assetID>cs16815747</assetID>
+		<article type="Article">
+			<id>0FFO-1860-APR03-001-001</id>
+			<assetID>cs16946819</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>48.56</ocr>
+			<sc>a</sc>
+			<pc>1</pc>
+			<wordCount>300</wordCount>
+			<ti>Births</ti>
+			<ct>Birth notices</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-001-002</id>
+			<assetID>cs17077891</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>44.74</ocr>
+			<sc>a</sc>
+			<pc>1</pc>
+			<wordCount>155</wordCount>
+			<ti>Marriages</ti>
+			<ct>Marriage notices</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-001-003</id>
+			<assetID>cs17208963</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>64.01</ocr>
+			<sc>a</sc>
+			<pc>1</pc>
+			<wordCount>1103</wordCount>
+			<ti>Deaths</ti>
+			<ct>Death notices</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-001-004</id>
+			<assetID>cs17340035</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>37.36</ocr>
+			<sc>a</sc>
+			<pc>1</pc>
+			<wordCount>11645</wordCount>
+			<ti>Economic Funeral Company (Limited),</ti>
+			<ct>Classified ads</ct>
+		</article>
+	</page>
+	<page>
+		<pa>2</pa>
+		<assetID>cs33592963</assetID>
+		<article type="Article">
+			<id>0FFO-1860-APR03-002-001</id>
+			<assetID>cs33724035</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>40.06</ocr>
+			<sc>a</sc>
+			<pc>1</pc>
+			<wordCount>13187</wordCount>
+			<ti>Regular Clipper Line of Packets.-For</ti>
+			<ct>Classified ads</ct>
+		</article>
+	</page>
+	<page>
+		<pa>3</pa>
+		<assetID>cs50370179</assetID>
+		<article type="Article">
+			<id>0FFO-1860-APR03-003-001</id>
+			<assetID>cs50501251</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>34.43</ocr>
+			<sc>a</sc>
+			<pc>1</pc>
+			<wordCount>12291</wordCount>
+			<ti>To Grouers' Assistants.-Wanted, a</ti>
+			<ct>Classified ads</ct>
+		</article>
+	</page>
+	<page>
+		<pa>4</pa>
+		<assetID>cs67147395</assetID>
+		<article type="Article">
+			<id>0FFO-1860-APR03-004-001</id>
+			<assetID>cs67278467</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>35.78</ocr>
+			<sc>a</sc>
+			<pc>1</pc>
+			<wordCount>13072</wordCount>
+			<ti>IN the COURT of BANKRUPTCY.-In the matter</ti>
+			<ct>Classified ads</ct>
+		</article>
+	</page>
+	<page>
+		<pa>5</pa>
+		<assetID>cs83924611</assetID>
+		<article type="Article">
+			<id>0FFO-1860-APR03-005-001</id>
+			<assetID>cs84055683</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>80.01</ocr>
+			<sc>a</sc>
+			<pc>1</pc>
+			<wordCount>2428</wordCount>
+			<ti>France</ti>
+			<detailed_au role="author">
+				<composed>FROM OUR OWN CORRESPONDENT.</composed>
+				<sobriquet>From Our Own Correspondent.</sobriquet>
+			</detailed_au>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-005-002</id>
+			<assetID>cs84186755</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>83.55</ocr>
+			<sc>b</sc>
+			<pc>1</pc>
+			<wordCount>1400</wordCount>
+			<ti>The Annexation Of Savoy</ti>
+			<detailed_au role="author">
+				<composed>FROM OUR OWN CORRESPONDENT.</composed>
+				<sobriquet>From Our Own Correspondent.</sobriquet>
+			</detailed_au>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-005-003</id>
+			<assetID>cs84317827</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>78.91</ocr>
+			<sc>c</sc>
+			<pc>1</pc>
+			<wordCount>2582</wordCount>
+			<ti>The Annexation Of Tuscany</ti>
+			<detailed_au role="author">
+				<composed>FROM OUR OWN CORRESPONDENT</composed>
+				<sobriquet>FROM OUR OWN CORRESPONDENT</sobriquet>
+			</detailed_au>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-005-004</id>
+			<assetID>cs84448899</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>75.28</ocr>
+			<sc>f</sc>
+			<pc>1</pc>
+			<wordCount>1213</wordCount>
+			<ti>Austria.</ti>
+			<detailed_au role="author">
+				<composed>FROM OUR OWN CORRESPONDENT.</composed>
+				<sobriquet>From Our Own Correspondent.</sobriquet>
+			</detailed_au>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-005-005</id>
+			<assetID>cs84579971</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>74.67</ocr>
+			<sc>f</sc>
+			<pc>1</pc>
+			<wordCount>1572</wordCount>
+			<ti>Turkey.</ti>
+			<detailed_au role="author">
+				<composed>FROM OUR OWN CORRESPONDENT.</composed>
+				<sobriquet>From Our Own Correspondent.</sobriquet>
+			</detailed_au>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-005-006</id>
+			<assetID>cs84711043</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>68.48</ocr>
+			<sc>g</sc>
+			<pc>1</pc>
+			<wordCount>221</wordCount>
+			<ti>The Commissionaires.</ti>
+			<detailed_au role="author">
+				<composed>E. W</composed>
+				<sobriquet>E. W</sobriquet>
+			</detailed_au>
+			<ct>Letter to the editor</ct>
+		</article>
+	</page>
+	<page>
+		<pa>6</pa>
+		<assetID>cs100701827</assetID>
+		<article type="Article">
+			<id>0FFO-1860-APR03-006-001</id>
+			<assetID>cs100832899</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>74.53</ocr>
+			<sc>a</sc>
+			<pc>1</pc>
+			<wordCount>3960</wordCount>
+			<ti>The Annexation Of Savoy.</ti>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-006-002</id>
+			<assetID>cs100963971</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>72.35</ocr>
+			<sc>c</sc>
+			<pc>1</pc>
+			<wordCount>2604</wordCount>
+			<ti>House Of Lords, Monday, April 2.</ti>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-006-003</id>
+			<assetID>cs101095043</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>66.54</ocr>
+			<sc>d</sc>
+			<pc>3</pc>
+			<wordCount>19889</wordCount>
+			<ti>House Of Commons, Monday, April 2.</ti>
+			<ct>News</ct>
+		</article>
+	</page>
+	<page>
+		<assetID>cs117479043</assetID>
+	</page>
+	<page>
+		<pa>8</pa>
+		<assetID>cs134256259</assetID>
+		<article type="Article">
+			<id>0FFO-1860-APR03-008-001</id>
+			<assetID>cs134387331</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>51.98</ocr>
+			<sc>b</sc>
+			<pc>1</pc>
+			<wordCount>951</wordCount>
+			<ti>Parliamentary Notices.</ti>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-008-002</id>
+			<assetID>cs134518403</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>41.22</ocr>
+			<sc>c</sc>
+			<pc>1</pc>
+			<wordCount>3358</wordCount>
+			<ti>The Young Man who did not Return Home</ti>
+			<ct>Classified ads</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-008-003</id>
+			<assetID>cs134649475</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>86.84</ocr>
+			<sc>e</sc>
+			<pc>1</pc>
+			<wordCount>1117</wordCount>
+			<ti>London, Tuesday, April 3, 1860.</ti>
+			<ct>Editorial</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-008-004</id>
+			<assetID>cs134780547</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>85.90</ocr>
+			<sc>f</sc>
+			<pc>1</pc>
+			<wordCount>1406</wordCount>
+			<ti>We are accustomed to anticipate that posterity</ti>
+			<ct>Editorial</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-008-005</id>
+			<assetID>cs134911619</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>88.48</ocr>
+			<sc>g</sc>
+			<pc>2</pc>
+			<wordCount>1437</wordCount>
+			<ti>The Quarterly Returns of the Revenue and Expen-</ti>
+			<ct>Editorial</ct>
+		</article>
+	</page>
+	<page>
+		<pa>9</pa>
+		<assetID>cs151033475</assetID>
+		<article type="Article">
+			<id>0FFO-1860-APR03-009-001</id>
+			<assetID>cs151164547</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>91.22</ocr>
+			<sc>a</sc>
+			<pc>1</pc>
+			<wordCount>1270</wordCount>
+			<ti>We rejoice to learn that measures are likely to</ti>
+			<ct>Editorial</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-009-002</id>
+			<assetID>cs151295619</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>85.52</ocr>
+			<sc>b</sc>
+			<pc>1</pc>
+			<wordCount>1502</wordCount>
+			<ti>The daily newspaper has taken the place of the</ti>
+			<ct>Editorial</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-009-003</id>
+			<assetID>cs151426691</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>69.58</ocr>
+			<sc>c</sc>
+			<pc>1</pc>
+			<wordCount>276</wordCount>
+			<ti>Court Circular</ti>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-009-004</id>
+			<assetID>cs151557763</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>74.45</ocr>
+			<sc>c</sc>
+			<pc>1</pc>
+			<wordCount>39</wordCount>
+			<ti>University Intelligence.</ti>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-009-005</id>
+			<assetID>cs151688835</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>51.22</ocr>
+			<sc>c</sc>
+			<pc>1</pc>
+			<wordCount>749</wordCount>
+			<ti>THE BISHOPRIC OF ANTIGUA.-Her Majesty has</ti>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-009-006</id>
+			<assetID>cs151819907</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>89.00</ocr>
+			<sc>e</sc>
+			<pc>1</pc>
+			<wordCount>687</wordCount>
+			<ti>Opening Of The Sardinian Chambers.</ti>
+			<ta>The King's Speech</ta>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-009-007</id>
+			<assetID>cs151950979</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>75.45</ocr>
+			<sc>e</sc>
+			<pc>1</pc>
+			<wordCount>113</wordCount>
+			<ti>France</ti>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-009-008</id>
+			<assetID>cs152082051</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>83.93</ocr>
+			<sc>e</sc>
+			<pc>1</pc>
+			<wordCount>92</wordCount>
+			<ti>News in Brief</ti>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-009-009</id>
+			<assetID>cs152213123</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>85.63</ocr>
+			<sc>e</sc>
+			<pc>1</pc>
+			<wordCount>364</wordCount>
+			<ti>Ireland.</ti>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-009-010</id>
+			<assetID>cs152344195</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>77.07</ocr>
+			<sc>f</sc>
+			<pc>1</pc>
+			<wordCount>1535</wordCount>
+			<ti>Liverpool, April 2.</ti>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-009-011</id>
+			<assetID>cs152475267</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>49.05</ocr>
+			<sc>f</sc>
+			<pc>1</pc>
+			<wordCount>636</wordCount>
+			<ti>Commercial Intelligence</ti>
+			<ct>News</ct>
+			<il type="Table" colorimage="bitonal" clipref="1"/>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-009-012</id>
+			<assetID>cs152606339</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>72.76</ocr>
+			<sc>g</sc>
+			<pc>1</pc>
+			<wordCount>658</wordCount>
+			<ti>Mr. Horsman And His Constituents.</ti>
+			<detailed_au role="author">
+				<composed>JOSEPH WATTS HALLEWELL.</composed>
+				<first>JOSEPH</first>
+				<middle>WATTS</middle>
+				<last>HALLEWELL.</last>
+			</detailed_au>
+			<detailed_au role="author" type="added">
+				<composed>"SAMUEL S. MARLING</composed>
+				<first>SAMUEL</first>
+				<middle>S.</middle>
+				<last>MARLING</last>
+			</detailed_au>
+			<detailed_au role="author" type="added">
+				<composed>"E. HORSMAN</composed>
+				<first>E.</first>
+				<last>HORSMAN</last>
+			</detailed_au>
+			<ct>Letter to the editor</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-009-013</id>
+			<assetID>cs152737411</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>26.09</ocr>
+			<sc>g</sc>
+			<pc>1</pc>
+			<wordCount>435</wordCount>
+			<ti>Passengers From India And China.-The fol-</ti>
+			<ct>News</ct>
+		</article>
+	</page>
+	<page>
+		<pa>10</pa>
+		<assetID>cs167810691</assetID>
+		<article type="Article">
+			<id>0FFO-1860-APR03-010-001</id>
+			<assetID>cs167941763</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>79.26</ocr>
+			<sc>a</sc>
+			<pc>1</pc>
+			<wordCount>1141</wordCount>
+			<ti>Money-Market and City Intelligence.</ti>
+			<ct>Business</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-010-002</id>
+			<assetID>cs168072835</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>65.08</ocr>
+			<sc>a</sc>
+			<pc>1</pc>
+			<wordCount>142</wordCount>
+			<ti>Trade Report.</ti>
+			<ct>Stock tables</ct>
+			<il type="Table" colorimage="bitonal" clipref="1"/>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-010-003</id>
+			<assetID>cs168203907</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>18.31</ocr>
+			<sc>a</sc>
+			<pc>1</pc>
+			<wordCount>23</wordCount>
+			<ti>English And Foreign Funds</ti>
+			<ta>Stock-Exchange, Monday, April 2</ta>
+			<ta>(From the official list, containing the business actually transacted.)</ta>
+			<ta>English Funds.</ta>
+			<ct>Stock tables</ct>
+			<il type="Table" colorimage="bitonal" clipref="1"/>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-010-004</id>
+			<assetID>cs168334979</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>77.80</ocr>
+			<sc>b</sc>
+			<pc>1</pc>
+			<wordCount>371</wordCount>
+			<ti>The Corn Trade.</ti>
+			<ct>Business</ct>
+			<il type="Table" colorimage="bitonal" clipref="1"/>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-010-005</id>
+			<assetID>cs168466051</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>38.89</ocr>
+			<sc>b</sc>
+			<pc>1</pc>
+			<wordCount>159</wordCount>
+			<ti>Metropolitan Cattle-Market, April 2.</ti>
+			<ct>Business</ct>
+			<il type="Table" colorimage="bitonal" clipref="1"/>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-010-006</id>
+			<assetID>cs168597123</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>55.77</ocr>
+			<sc>b</sc>
+			<pc>1</pc>
+			<wordCount>64</wordCount>
+			<ti>Hop-Market, April 2.</ti>
+			<ct>Business</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-010-007</id>
+			<assetID>cs168728195</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>28.86</ocr>
+			<sc>b</sc>
+			<pc>1</pc>
+			<wordCount>82</wordCount>
+			<ti>Coal-Market, April 2.</ti>
+			<ta>(Prices of coals per ton at the close of the market.)</ta>
+			<ct>Business</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-010-008</id>
+			<assetID>cs168859267</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>65.79</ocr>
+			<sc>b</sc>
+			<pc>1</pc>
+			<wordCount>763</wordCount>
+			<ti>GLASGOW, MARCH 31.-Cotton.-Our cotton-</ti>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-010-009</id>
+			<assetID>cs168990339</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>77.73</ocr>
+			<sc>c</sc>
+			<pc>1</pc>
+			<wordCount>285</wordCount>
+			<ti>Railway, Mining, and Other Shares.</ti>
+			<ct>Stock tables</ct>
+			<il type="Table" colorimage="bitonal" clipref="1"/>
+			<il type="Table" colorimage="bitonal" clipref="1"/>
+			<il type="Table" colorimage="bitonal" clipref="1"/>
+			<il type="Table" colorimage="bitonal" clipref="1"/>
+			<il type="Table" colorimage="bitonal" clipref="1"/>
+			<il type="Table" colorimage="bitonal" clipref="1"/>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-010-010</id>
+			<assetID>cs169121411</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>75.15</ocr>
+			<sc>f</sc>
+			<pc>1</pc>
+			<wordCount>365</wordCount>
+			<ti>Western And North-Western Of France.</ti>
+			<ct>Business</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-010-011</id>
+			<assetID>cs169252483</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>67.69</ocr>
+			<sc>f</sc>
+			<pc>1</pc>
+			<wordCount>222</wordCount>
+			<ti>East Somerset.</ti>
+			<ct>Business</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-010-012</id>
+			<assetID>cs169383555</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>79.91</ocr>
+			<sc>f</sc>
+			<pc>1</pc>
+			<wordCount>195</wordCount>
+			<ti>Andover And Redbridge.</ti>
+			<ct>Business</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-010-013</id>
+			<assetID>cs169514627</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>74.04</ocr>
+			<sc>f</sc>
+			<pc>1</pc>
+			<wordCount>136</wordCount>
+			<ti>Dublin And Kingstown</ti>
+			<ct>Business</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-010-014</id>
+			<assetID>cs169645699</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>78.32</ocr>
+			<sc>f</sc>
+			<pc>1</pc>
+			<wordCount>267</wordCount>
+			<ti>Dunblane, Doune, And Callander</ti>
+			<ct>Business</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-010-015</id>
+			<assetID>cs169776771</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>44.68</ocr>
+			<sc>f</sc>
+			<pc>1</pc>
+			<wordCount>69</wordCount>
+			<ti>Perth And Dunkeld</ti>
+			<ct>Business</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-010-016</id>
+			<assetID>cs169907843</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>58.79</ocr>
+			<sc>f</sc>
+			<pc>1</pc>
+			<wordCount>90</wordCount>
+			<ti>Perth And Methven</ti>
+			<ct>Business</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-010-017</id>
+			<assetID>cs170038915</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>60.99</ocr>
+			<sc>f</sc>
+			<pc>1</pc>
+			<wordCount>64</wordCount>
+			<ti>Kinross-Shire.</ti>
+			<ct>Business</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-010-018</id>
+			<assetID>cs170169987</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>77.16</ocr>
+			<sc>f</sc>
+			<pc>1</pc>
+			<wordCount>69</wordCount>
+			<ti>Markinch And Leslie</ti>
+			<ct>Business</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-010-019</id>
+			<assetID>cs170301059</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>65.44</ocr>
+			<sc>f</sc>
+			<pc>1</pc>
+			<wordCount>49</wordCount>
+			<ti>Arbroath And Forfar.</ti>
+			<ct>Business</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-010-020</id>
+			<assetID>cs170432131</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>34.97</ocr>
+			<sc>f</sc>
+			<pc>1</pc>
+			<wordCount>24</wordCount>
+			<ti>Crieff Junction</ti>
+			<ct>Business</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-010-021</id>
+			<assetID>cs170563203</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>70.97</ocr>
+			<sc>f</sc>
+			<pc>1</pc>
+			<wordCount>77</wordCount>
+			<ti>St. Andrew's.</ti>
+			<ct>Business</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-010-022</id>
+			<assetID>cs170694275</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>55.16</ocr>
+			<sc>f</sc>
+			<pc>1</pc>
+			<wordCount>366</wordCount>
+			<ti>Portpatrick.</ti>
+			<ct>Business</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-010-023</id>
+			<assetID>cs170825347</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>45.63</ocr>
+			<sc>g</sc>
+			<pc>1</pc>
+			<wordCount>85</wordCount>
+			<ti>Cape Town.</ti>
+			<ct>Business</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-010-024</id>
+			<assetID>cs170956419</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>68.18</ocr>
+			<sc>g</sc>
+			<pc>1</pc>
+			<wordCount>211</wordCount>
+			<ti>General Terminus.</ti>
+			<ct>Business</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-010-025</id>
+			<assetID>cs171087491</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>19.59</ocr>
+			<sc>g</sc>
+			<pc>1</pc>
+			<wordCount>71</wordCount>
+			<ti>Madras Irrigation And Canal</ti>
+			<ct>Business</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-010-026</id>
+			<assetID>cs171218563</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>43.75</ocr>
+			<sc>g</sc>
+			<pc>1</pc>
+			<wordCount>2</wordCount>
+			<ti>Traffic Returns</ti>
+			<ct>Stock tables</ct>
+			<il type="Table" colorimage="bitonal" clipref="1"/>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-010-027</id>
+			<assetID>cs171349635</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>38.54</ocr>
+			<sc>g</sc>
+			<pc>1</pc>
+			<wordCount>388</wordCount>
+			<ti>Provincial Stock-Exchanges.</ti>
+			<ct>Business</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-010-028</id>
+			<assetID>cs171480707</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>50.41</ocr>
+			<sc>g</sc>
+			<pc>1</pc>
+			<wordCount>760</wordCount>
+			<ti>State Of Trade.</ti>
+			<ct>Business</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-010-029</id>
+			<assetID>cs171611779</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>35.85</ocr>
+			<sc>g</sc>
+			<pc>1</pc>
+			<wordCount>139</wordCount>
+			<ti>Liverpool Cotton-Market, Monday.-The de-</ti>
+			<ct>News</ct>
+		</article>
+	</page>
+	<page>
+		<pa>11</pa>
+		<assetID>cs184587907</assetID>
+		<article type="Article">
+			<id>0FFO-1860-APR03-011-001</id>
+			<assetID>cs184718979</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>70.16</ocr>
+			<sc>a</sc>
+			<pc>1</pc>
+			<wordCount>305</wordCount>
+			<ti>In Re John Edward Buller.</ti>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-011-002</id>
+			<assetID>cs184850051</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>51.34</ocr>
+			<sc>a</sc>
+			<pc>1</pc>
+			<wordCount>128</wordCount>
+			<ti>In Re John Jones.</ti>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-011-003</id>
+			<assetID>cs184981123</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>52.84</ocr>
+			<sc>a</sc>
+			<pc>1</pc>
+			<wordCount>94</wordCount>
+			<ti>In Re Augustus Brine</ti>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-011-004</id>
+			<assetID>cs185112195</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>74.23</ocr>
+			<sc>a</sc>
+			<pc>1</pc>
+			<wordCount>173</wordCount>
+			<ti>In Re John White.</ti>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-011-005</id>
+			<assetID>cs185243267</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>65.85</ocr>
+			<sc>a</sc>
+			<pc>1</pc>
+			<wordCount>27</wordCount>
+			<ti>Thomas Innocent's Insolvency</ti>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-011-006</id>
+			<assetID>cs185374339</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>55.69</ocr>
+			<sc>a</sc>
+			<pc>1</pc>
+			<wordCount>1268</wordCount>
+			<ti>The April sessions of the Central Criminal Court was</ti>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-011-007</id>
+			<assetID>cs185505411</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>60.00</ocr>
+			<sc>b</sc>
+			<pc>1</pc>
+			<wordCount>220</wordCount>
+			<ti>New Court.</ti>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-011-008</id>
+			<assetID>cs185636483</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>43.40</ocr>
+			<sc>b</sc>
+			<pc>1</pc>
+			<wordCount>278</wordCount>
+			<ti>MARLBOROUGH-STREET.-Mr. Thomas Roberts, of 14</ti>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-011-009</id>
+			<assetID>cs185767555</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>62.75</ocr>
+			<sc>b</sc>
+			<pc>1</pc>
+			<wordCount>249</wordCount>
+			<ti>WESTMINISTER.-Robert Mason, a gentleman's servant,</ti>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-011-010</id>
+			<assetID>cs185898627</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>63.46</ocr>
+			<sc>b</sc>
+			<pc>1</pc>
+			<wordCount>627</wordCount>
+			<ti>WORSHIP-STREET.-William Fossey, a respectable-look-</ti>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-011-011</id>
+			<assetID>cs186029699</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>73.08</ocr>
+			<sc>b</sc>
+			<pc>1</pc>
+			<wordCount>259</wordCount>
+			<ti>WANDSWORTH.-Mr. Alfred Jones, a solicitor residing</ti>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-011-012</id>
+			<assetID>cs186160771</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>37.73</ocr>
+			<sc>b</sc>
+			<pc>1</pc>
+			<wordCount>131</wordCount>
+			<ti>Law Notices.-(This Day.)</ti>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-011-013</id>
+			<assetID>cs186291843</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>60.38</ocr>
+			<sc>b</sc>
+			<pc>1</pc>
+			<wordCount>164</wordCount>
+			<ti>[Advertisement.]-To Ladies desirons of Acquiring Pro-</ti>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-011-014</id>
+			<assetID>cs186422915</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>77.86</ocr>
+			<sc>c</sc>
+			<pc>1</pc>
+			<wordCount>284</wordCount>
+			<ti>Kingston, March 31.</ti>
+			<ta>Scott Russell v. The Viscount Sa Da Bandeira</ta>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-011-015</id>
+			<assetID>cs186553987</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>72.82</ocr>
+			<sc>c</sc>
+			<pc>1</pc>
+			<wordCount>179</wordCount>
+			<ti>DIX v. The South-Western Railway Company.</ti>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-011-016</id>
+			<assetID>cs186685059</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>73.17</ocr>
+			<sc>c</sc>
+			<pc>1</pc>
+			<wordCount>307</wordCount>
+			<ti>Glocester, March 31.</ti>
+			<ta>CIVIL COURT.-(Before Mr. Baron BRAMWELL and a Common Jury.)</ta>
+			<ta>Eveson v. The Oxford, Worcester, And Wolverhampton Railway Company.</ta>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-011-017</id>
+			<assetID>cs186816131</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>82.98</ocr>
+			<sc>c</sc>
+			<pc>1</pc>
+			<wordCount>159</wordCount>
+			<ti>Cotterill v. Davies.</ti>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-011-018</id>
+			<assetID>cs186947203</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>53.10</ocr>
+			<sc>c</sc>
+			<pc>1</pc>
+			<wordCount>307</wordCount>
+			<ti>Townsend v. Power.</ti>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-011-019</id>
+			<assetID>cs187078275</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>65.76</ocr>
+			<sc>c</sc>
+			<pc>1</pc>
+			<wordCount>718</wordCount>
+			<ti>CRIMINAL COURT.-(Before Mr. Justice KEATING.)</ti>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-011-020</id>
+			<assetID>cs187209347</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>77.48</ocr>
+			<sc>d</sc>
+			<pc>1</pc>
+			<wordCount>1233</wordCount>
+			<ti>Coroner's Inquisition And Depositions</ti>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-011-021</id>
+			<assetID>cs187340419</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>70.72</ocr>
+			<sc>d</sc>
+			<pc>1</pc>
+			<wordCount>632</wordCount>
+			<ti>CIVIL COURT.-(Before Mr. Baron BRAMWELL and Special Juries.)</ti>
+			<ta>Woollaston v. Hewson.</ta>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-011-022</id>
+			<assetID>cs187471491</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>60.24</ocr>
+			<sc>d</sc>
+			<pc>1</pc>
+			<wordCount>281</wordCount>
+			<ti>Marfell v. The South-Western Railway Company.</ti>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-011-023</id>
+			<assetID>cs187602563</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>77.47</ocr>
+			<sc>f</sc>
+			<pc>1</pc>
+			<wordCount>506</wordCount>
+			<ti>CRIMINAL COURT.-(Before Mr. Justice KEATING.)</ti>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-011-024</id>
+			<assetID>cs187733635</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>36.27</ocr>
+			<sc>f</sc>
+			<pc>1</pc>
+			<wordCount>76</wordCount>
+			<ti>Bristol, March 30.</ti>
+			<ta>Turner v. Davis.</ta>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-011-025</id>
+			<assetID>cs187864707</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>87.56</ocr>
+			<sc>f</sc>
+			<pc>1</pc>
+			<wordCount>194</wordCount>
+			<ti>Fish v. Shaw And Others.</ti>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-011-026</id>
+			<assetID>cs187995779</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>81.44</ocr>
+			<sc>f</sc>
+			<pc>1</pc>
+			<wordCount>108</wordCount>
+			<ti>Dredge v. Roach</ti>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-011-027</id>
+			<assetID>cs188126851</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>69.96</ocr>
+			<sc>f</sc>
+			<pc>1</pc>
+			<wordCount>42</wordCount>
+			<ti>Bevan v. Cox</ti>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-011-028</id>
+			<assetID>cs188257923</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>69.19</ocr>
+			<sc>f</sc>
+			<pc>1</pc>
+			<wordCount>392</wordCount>
+			<ti>Garton v. Bristol And Exeter Railway Company</ti>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-011-029</id>
+			<assetID>cs188388995</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>72.86</ocr>
+			<sc>f</sc>
+			<pc>1</pc>
+			<wordCount>189</wordCount>
+			<ti>April 2.</ti>
+			<ta>Pigeon v. Goolden.</ta>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-011-030</id>
+			<assetID>cs188520067</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>69.35</ocr>
+			<sc>f</sc>
+			<pc>1</pc>
+			<wordCount>406</wordCount>
+			<ti>Northern Circuit.</ti>
+			<ta>Liverpool, April 2.</ta>
+			<ta>CIVIL COURT.-(Before Mr. Justice BLACKBURN and a Special Jury.)</ta>
+			<ta>Fraser And Another, Assignees, &amp; c., v. Levy And Another</ta>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-011-031</id>
+			<assetID>cs188651139</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>67.58</ocr>
+			<sc>g</sc>
+			<pc>1</pc>
+			<wordCount>301</wordCount>
+			<ti>The Weather</ti>
+			<ct>Weather report</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-011-032</id>
+			<assetID>cs188782211</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>29.44</ocr>
+			<sc>g</sc>
+			<pc>1</pc>
+			<wordCount>78</wordCount>
+			<ti>The Weather</ti>
+			<ct>Weather report</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-011-033</id>
+			<assetID>cs188913283</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>28.00</ocr>
+			<sc>g</sc>
+			<pc>1</pc>
+			<wordCount>45</wordCount>
+			<ti>The Weather</ti>
+			<ct>Weather report</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-011-034</id>
+			<assetID>cs189044355</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>40.84</ocr>
+			<sc>g</sc>
+			<pc>1</pc>
+			<wordCount>677</wordCount>
+			<ti>Ship News.</ti>
+			<ct>Shipping news</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-011-035</id>
+			<assetID>cs189175427</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>54.78</ocr>
+			<sc>g</sc>
+			<pc>1</pc>
+			<wordCount>292</wordCount>
+			<ti>Barometric Wave.</ti>
+			<detailed_au role="author">
+				<composed>E. J. LOWE.</composed>
+				<first>E.</first>
+				<middle>J.</middle>
+				<last>LOWE.</last>
+			</detailed_au>
+			<ct>Letter to the editor</ct>
+			<il type="Table" colorimage="bitonal" clipref="1"/>
+		</article>
+	</page>
+	<page>
+		<pa>12</pa>
+		<assetID>cs201365123</assetID>
+		<article type="Article">
+			<id>0FFO-1860-APR03-012-001</id>
+			<assetID>cs201496195</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>82.67</ocr>
+			<sc>a</sc>
+			<pc>1</pc>
+			<wordCount>1230</wordCount>
+			<ti>The authorities connected with the Medical Department</ti>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-012-002</id>
+			<assetID>cs201627267</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>72.05</ocr>
+			<sc>a</sc>
+			<pc>1</pc>
+			<wordCount>54</wordCount>
+			<ti>Militia.</ti>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-012-003</id>
+			<assetID>cs201758339</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>77.29</ocr>
+			<sc>a</sc>
+			<pc>1</pc>
+			<wordCount>154</wordCount>
+			<ti>Rifle Shooting.</ti>
+			<detailed_au role="author">
+				<composed>CHARLES VANSITTART</composed>
+				<first>CHARLES</first>
+				<last>VANSITTART</last>
+			</detailed_au>
+			<ct>Letter to the editor</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-012-004</id>
+			<assetID>cs201889411</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>29.27</ocr>
+			<sc>a</sc>
+			<pc>1</pc>
+			<wordCount>174</wordCount>
+			<ti>THE WINDSOR VOLUNTEERS.-The Windsor and</ti>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-012-005</id>
+			<assetID>cs202020483</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>73.91</ocr>
+			<sc>b</sc>
+			<pc>1</pc>
+			<wordCount>1593</wordCount>
+			<ti>Purification Of The Serpentine.</ti>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-012-006</id>
+			<assetID>cs202151555</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>70.63</ocr>
+			<sc>b</sc>
+			<pc>1</pc>
+			<wordCount>403</wordCount>
+			<ti>Irish Labourers And Tenant Farmers.</ti>
+			<detailed_au role="author">
+				<composed>WILLIAM LEVINGE</composed>
+				<first>WILLIAM</first>
+				<last>LEVINGE</last>
+			</detailed_au>
+			<ct>Letter to the editor</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-012-007</id>
+			<assetID>cs202282627</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>58.22</ocr>
+			<sc>c</sc>
+			<pc>1</pc>
+			<wordCount>434</wordCount>
+			<ti>Tattersall's, Monday</ti>
+			<ct>Sports</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-012-008</id>
+			<assetID>cs202413699</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>43.60</ocr>
+			<sc>c</sc>
+			<pc>1</pc>
+			<wordCount>48</wordCount>
+			<ti>Sports in Brief</ti>
+			<ct>Sports</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-012-009</id>
+			<assetID>cs202544771</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>78.98</ocr>
+			<sc>c</sc>
+			<pc>1</pc>
+			<wordCount>591</wordCount>
+			<ti>The Post-Office.</ti>
+			<detailed_au role="author">
+				<composed>PRO BONO PUBLICO.</composed>
+				<sobriquet>PRO BONO PUBLICO.</sobriquet>
+			</detailed_au>
+			<ct>Letter to the editor</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-012-010</id>
+			<assetID>cs202675843</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>88.62</ocr>
+			<sc>c</sc>
+			<pc>1</pc>
+			<wordCount>477</wordCount>
+			<ti>The Scotch Herring Fishery.</ti>
+			<detailed_au role="author">
+				<composed>ALEXANDER C. MILLER</composed>
+				<first>ALEXANDER</first>
+				<middle>C.</middle>
+				<last>MILLER</last>
+			</detailed_au>
+			<ct>Letter to the editor</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-012-011</id>
+			<assetID>cs202806915</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>32.61</ocr>
+			<sc>c</sc>
+			<pc>1</pc>
+			<wordCount>411</wordCount>
+			<ti>The French Expedition To China.-Two of</ti>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-012-012</id>
+			<assetID>cs202937987</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>73.08</ocr>
+			<sc>d</sc>
+			<pc>1</pc>
+			<wordCount>448</wordCount>
+			<ti>Haymarket Theatre.</ti>
+			<ct>Review</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-012-013</id>
+			<assetID>cs203069059</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>76.97</ocr>
+			<sc>d</sc>
+			<pc>1</pc>
+			<wordCount>910</wordCount>
+			<ti>Monday Popular Concerts.</ti>
+			<ct>Review</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-012-014</id>
+			<assetID>cs203200131</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>50.00</ocr>
+			<sc>d</sc>
+			<pc>1</pc>
+			<wordCount>518</wordCount>
+			<ti>The Mails, &amp; c.-Southampton, April 2.-The</ti>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-012-015</id>
+			<assetID>cs203331203</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>75.71</ocr>
+			<sc>f</sc>
+			<pc>1</pc>
+			<wordCount>1393</wordCount>
+			<ti>The Royal General Theatrical Fund.</ti>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-012-016</id>
+			<assetID>cs203462275</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>58.14</ocr>
+			<sc>f</sc>
+			<pc>1</pc>
+			<wordCount>405</wordCount>
+			<ti>Large Cemetery At Liverpool.-The Liverpool</ti>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-012-017</id>
+			<assetID>cs203593347</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>70.87</ocr>
+			<sc>g</sc>
+			<pc>1</pc>
+			<wordCount>1245</wordCount>
+			<ti>Fraudulent Trade Marks.</ti>
+			<ta>Deputation To The Board Of Trade</ta>
+			<ct>News</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-012-018</id>
+			<assetID>cs203724419</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>61.98</ocr>
+			<sc>g</sc>
+			<pc>1</pc>
+			<wordCount>55</wordCount>
+			<ti>To The Editor Of The Times.</ti>
+			<detailed_au role="author">
+				<composed>ANTIQUARY.</composed>
+				<sobriquet>ANTIQUARY.</sobriquet>
+			</detailed_au>
+			<ct>Letter to the editor</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-012-019</id>
+			<assetID>cs203855491</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>53.57</ocr>
+			<sc>g</sc>
+			<pc>1</pc>
+			<wordCount>894</wordCount>
+			<ti>[Advertisement.]-Ollendorff's Method of Learning to</ti>
+			<ct>News</ct>
+		</article>
+	</page>
+	<page>
+		<pa>13</pa>
+		<assetID>cs218142339</assetID>
+		<article type="Article">
+			<id>0FFO-1860-APR03-013-001</id>
+			<assetID>cs218273411</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>45.22</ocr>
+			<sc>a</sc>
+			<pc>1</pc>
+			<wordCount>12927</wordCount>
+			<ti>Just published. In post 8vo., price 6s., cloth.</ti>
+			<ct>Classified ads</ct>
+		</article>
+	</page>
+	<page>
+		<pa>14</pa>
+		<assetID>cs234919555</assetID>
+		<article type="Article">
+			<id>0FFO-1860-APR03-014-001</id>
+			<assetID>cs235050627</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>35.04</ocr>
+			<sc>a</sc>
+			<pc>1</pc>
+			<wordCount>12909</wordCount>
+			<ti>SUSSEX.-Messrs. Brooks and Beal have to LET,</ti>
+			<ct>Classified ads</ct>
+		</article>
+	</page>
+	<page>
+		<pa>15</pa>
+		<assetID>cs251696771</assetID>
+		<article type="Article">
+			<id>0FFO-1860-APR03-015-001</id>
+			<assetID>cs251827843</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>36.82</ocr>
+			<sc>a</sc>
+			<pc>1</pc>
+			<wordCount>12416</wordCount>
+			<ti>Want Places.</ti>
+			<ct>Classified ads</ct>
+		</article>
+	</page>
+	<page>
+		<pa>16</pa>
+		<assetID>cs268473987</assetID>
+		<article type="Article">
+			<id>0FFO-1860-APR03-016-001</id>
+			<assetID>cs268605059</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>51.82</ocr>
+			<sc>a</sc>
+			<pc>1</pc>
+			<wordCount>4065</wordCount>
+			<ti>HOUSEMAID(UPPER) in a nobleman's or gentleman's</ti>
+			<ct>Classified ads</ct>
+		</article>
+		<article type="Article">
+			<id>0FFO-1860-APR03-016-002</id>
+			<assetID>cs268736131</assetID>
+			<ocrLanguage>English</ocrLanguage>
+			<ocr>32.15</ocr>
+			<sc>c</sc>
+			<pc>1</pc>
+			<wordCount>8503</wordCount>
+			<ti>Sales By Auction.</ti>
+			<ct>Real estate ads</ct>
+		</article>
+	</page>
+</issue>

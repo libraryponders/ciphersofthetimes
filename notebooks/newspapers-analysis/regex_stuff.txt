@@ -1,0 +1,11 @@
+# https://regex101.com/
+# https://regexr.com/
+# https://docs.python.org/3/library/re.html#
+
+# initials: "(\b(?=\w))([A-Z]\.(\s)?)+"
+# second: \b([A-Z][.](\s)?)+
+# months: |January|February|March|April|June|July|August|September|October|November|December
+# regex months: {"months": r"([1-3][0-9])?\s*(January|February|March|April|June|July|August|September|October|November|December)(,|\.))?(\s*\d+[.]?)?"}
+# regex months abbrev old: "months_abrv": r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[.](\s*([1-3][0-9])(,|\.))?(\s*\d+[.]?)?"
+# regex months abrev new: (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[.](\s*(\d{1,2})(,|\.)?)?(\s*\d+)?
+# regex expressions:
