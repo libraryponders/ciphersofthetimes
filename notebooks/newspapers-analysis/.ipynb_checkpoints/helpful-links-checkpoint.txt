@@ -1,0 +1,2 @@
+https://towardsdatascience.com/dealing-with-list-values-in-pandas-dataframes-a177e534f173
+
