@@ -119,20 +119,20 @@ def clean_tokenized_list(sent_list):
     return cleaned_tokenized_sentences
 
 def process_dirty_texts_to_df(list_of_filenames_and_dirty_texts):
-    print("[-] Beginning text preprocessing...")
-    filenames = []
     cleaned_texts = []
     cleaned_corpus_as_dictionary = {}
-    for index, (filename, dirty_text) in enumerate(list_of_filenames_and_dirty_texts):
-        progress(index, len(list_of_filenames_and_dirty_texts))
+    for filename, dirty_text in list_of_filenames_and_dirty_texts:
         preprocessed_text = preprocess_text(dirty_text)
         tokenized_sentences = sent_tokenize(preprocessed_text)
         cleaned_tokenized_sentences = clean_tokenized_list(tokenized_sentences)
+        relative_sentence_index = 0
         for clean_tokenized_sentence in cleaned_tokenized_sentences:
-            filenames.append(filename)
-            cleaned_texts.append(clean_tokenized_sentence)
-    cleaned_corpus_as_dictionary['file_names'] = filenames
-    cleaned_corpus_as_dictionary['sentences'] = cleaned_texts
+            tupled_files = (filename, clean_tokenized_sentence, relative_sentence_index)
+            cleaned_texts.append(tupled_files)
+            relative_sentence_index += 1
+    cleaned_corpus_as_dictionary['file_names'] = [x[0] for x in cleaned_texts]
+    cleaned_corpus_as_dictionary['sentences'] = [x[1] for x in cleaned_texts]
+    cleaned_corpus_as_dictionary['relative_sentence_index'] = [x[2] for x in cleaned_texts]
     
     df = pd.DataFrame(cleaned_corpus_as_dictionary)
     print("\n[-] Text preprocessing completed.")
