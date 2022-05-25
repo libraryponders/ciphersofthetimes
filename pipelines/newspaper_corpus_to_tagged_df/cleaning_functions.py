@@ -19,15 +19,17 @@ regex_expressions = {"initials": r"\b([A-Z][.](\s)?)+", "prefixes": r"(Mr|St|Mrs
                      "months_abrv": r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[.](\s*(\d{1,2})(,|\.)?)?(\s*\d+)?",\
                      "pennies": r"(\d+[.]?\s*)[d][.]", "months_and_years": r"\d{1,2}[.]\s*(\d{4})"}
 
+titles = ["Mr.", "St.", "Mrs.", "Ms.", "Dr.", "Esq.", "Sec.", "Secretar."]
 
 def input_corpus_of_txts(path):
     list_of_filenames_and_dirty_texts = []
     for filename in os.listdir(path):
-        with codecs.open(path + filename, 'r', encoding='utf-8', errors="ignore") as raw_text:
-            dirty_text = raw_text.read()
-        list_of_filenames_and_dirty_texts.append((filename, dirty_text))
+        # double check that these are text files
+        if filename.endswith(".txt"):
+            with codecs.open(path + filename, 'r', encoding='utf-8', errors="ignore") as raw_text:
+                dirty_text = raw_text.read()
+            list_of_filenames_and_dirty_texts.append((filename, dirty_text))
     return list_of_filenames_and_dirty_texts
-
 
 # strip all accented characters:
 def strip_accents(text):
