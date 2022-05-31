@@ -7,6 +7,7 @@ import spacy
 # slower but more accurate model:
 # download it first
 # !python -m spacy download en_core_web_lg
+titles = ["Mr.", "St.", "Mrs.", "Ms.", "Dr.", "Esq.", "Sec.", "Secretar."]
 
 nlp = spacy.load("en_core_web_lg")
 

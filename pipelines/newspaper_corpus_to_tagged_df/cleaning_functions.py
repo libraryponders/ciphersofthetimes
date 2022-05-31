@@ -19,7 +19,7 @@ regex_expressions = {"initials": r"\b([A-Z][.](\s)?)+", "prefixes": r"(Mr|St|Mrs
                      "months_abrv": r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[.](\s*(\d{1,2})(,|\.)?)?(\s*\d+)?",\
                      "pennies": r"(\d+[.]?\s*)[d][.]", "months_and_years": r"\d{1,2}[.]\s*(\d{4})"}
 
-titles = ["Mr.", "St.", "Mrs.", "Ms.", "Dr.", "Esq.", "Sec.", "Secretar."]
+
 
 def input_corpus_of_txts(path):
     list_of_filenames_and_dirty_texts = []
@@ -135,7 +135,6 @@ def process_dirty_texts_to_df(list_of_filenames_and_dirty_texts):
     cleaned_corpus_as_dictionary['file_names'] = [x[0] for x in cleaned_texts]
     cleaned_corpus_as_dictionary['sentences'] = [x[1] for x in cleaned_texts]
     cleaned_corpus_as_dictionary['relative_sentence_index'] = [x[2] for x in cleaned_texts]
-    
     df = pd.DataFrame(cleaned_corpus_as_dictionary)
-    print("\n[-] Text preprocessing completed.")
+    print("[-] Text preprocessing completed.")
     return df
