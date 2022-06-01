@@ -7,6 +7,7 @@ Its purpose is to transform a directory of .txt files
 (a folder of OCRed newspaper text in out case) into 
 cleaned and preprocessed .csv files to be used with an R-based
 classification model.
+
 ## Usage/Examples
 
 ```python3 ./main.py -i <PATH_TO_CORPUS> -o <PATH_TO_OUTPUT_FOLDER> -n <OUTPUT_FILE_NAME>```
@@ -27,7 +28,7 @@ If you haven't used spacy before, you will probably need to download the English
 
 `python -m spacy download en_core_web_lg`
 
-## Authors
+## Repo Authors
 
 - Leehu Ben Sigler
 

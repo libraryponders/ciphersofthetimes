@@ -33,8 +33,7 @@ data we have collected over the past year.
 This includes metadata for nearly 150 Victorian novels,
 as well as other information such as TTR, MATTR, raw statistics,
 POS tagging, and Topic Modeling results. Raw newspaper data is currently
-being processed and will be uploaded, if possible, when 
-they are available. 
+being processed and will be uploaded, if possible, when available. 
 
 All output data frames are saved in the "spreadsheets" folder,
 which includes complete data frames for the two novel corpora
