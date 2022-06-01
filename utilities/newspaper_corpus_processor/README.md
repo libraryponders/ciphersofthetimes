@@ -4,7 +4,7 @@
 This script was created to supplement the efforts 
 of the Ciphers of _the Times_ research project. 
 Its purpose is to transform a directory of .txt files 
-(a folder of OCRed newspaper text in out case) into 
+(a folder of OCRed newspaper text in our case) into 
 cleaned and preprocessed .csv files to be used with an R-based
 classification model.
 
