@@ -38,5 +38,6 @@ If you haven't used spacy before, you will probably need to download the English
  - Research Assistants:
     - Ronny Litvak-Katzman
     - Lillian Simons
- - This project is funded by the Social Sciences and Humanities Research Council of Canada.
+   
+*** This project is funded by the Social Sciences and Humanities Research Council of Canada.
 
