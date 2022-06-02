@@ -52,8 +52,9 @@ at McGill University Library in 2023.
 ## Repo Authors
 
 - Leehu Ben Sigler
-- Ronny Litvak-Katzman
+- Ronny Litvack-Katzman
 - Lillian Simons
+
 ## Project Members
 
 - Principal Investigator: Professor Nathalie Cooke
