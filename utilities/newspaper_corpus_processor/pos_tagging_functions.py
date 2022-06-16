@@ -12,7 +12,7 @@ import spacy
 ### Setting up titles in order to condense multiple PROPN (proper nouns)
 ### into singular instances. Example: (Mr., PROPN), (Smith, PROPN) -> (Mr. Smith, PROPN)
 titles = ["Mr.", "St.", "Mrs.", "Ms.", "Dr.", "Esq.", "Sec.", "Secretar."]
-sentence_end_symbols = [".", ",", "?", "!"]
+
 nlp = spacy.load("en_core_web_lg")
 
 ### This function takes in an analyzed sentence (already tagged by the pos_tag_sentence function)
@@ -54,8 +54,6 @@ def pos_tag_list_of_sentences(list_of_cleaned_sentences):
         pos_tagged_text.append(tagged_sent)
     # returns a list of tuples
     return pos_tagged_text
-
-
 
 ### This function uses the "titles" list defined at the top of this file
 ### to transform all occurences of names receiving two PROPN tags into one occurence. 
@@ -133,41 +131,4 @@ def pos_tag_texts_from_df(df, sentences_column='sentences'):
         # place the output in their appropriate column at the correct index
         df.at[index, 'tagged_sentences'] = tagged_sentence
         df.at[index, 'pos_counts'] = pos_counts
-    return df
-
-
-### This function reformats the tagged sentence tuple into a format
-### comfortable for Ronny to run tidy text formatting
-def format_for_tidy_text_prep(tagged_sentence):
-    text_ = ""
-    tags_ = ""
-    for word in tagged_sentence:
-        tags_ = tags_ + " " + word[1]
-        if str(word[0]) in sentence_end_symbols:
-            text_ += str(word[0])
-        else:
-            text_ = text_ + " " + str(word[0])
-    return (text_, tags_)
-
-
-def pos_tag_texts_from_df_new(df, sentences_column='sentences'):
-    # setting up two new empty df columns for the pos-tagged texts
-    df['text_'] = ''
-    df['tags_'] = ''
-    # iterate over df
-    for index, row in df.iterrows():
-        # show progress bar since this can take some time
-        progress(index, len(list(df.index.values)))
-        # grab the text column specified by the function
-        sentence = row[sentences_column]
-        # pos tag the sentence
-        tagged_sentence_and_counts = pos_tag_sentence(sentence)
-        # then check for double PROPN tags as a result of proper names
-        tagged_sentence, pos_counts = remove_double_propernouns_from_tagged_sentence(tagged_sentence_and_counts)
-        # get text in a pre-tidy text format for Ronny
-        text_as_string, pos_counts_as_string = format_for_tidy_text_prep(tagged_sentence)
-        # place the output in their appropriate column at the correct index
-        df.at[index, 'text_'] = text_as_string
-        df.at[index, 'tags_'] = pos_counts_as_string
-    progress(100, 100)
     return df

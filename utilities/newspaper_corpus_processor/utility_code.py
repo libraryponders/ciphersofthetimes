@@ -3,9 +3,6 @@
 # imports:
 import sys
 import pandas as pd
-import random
-import os
-import codecs
 
 ### Progress bar to view the progress of lengthy processes
 ### As suggested by Rom Ruben 
@@ -17,46 +14,6 @@ def progress(count, total, status=''):
     bar = '#' * filled_len + '-' * (bar_len - filled_len)
     sys.stdout.write('[%s] %s%s ...%s\r' % (bar, percents, '%', status))
     sys.stdout.flush() 
-
-
-def get_sample_newspapers(path_to_newspapers, sample_number):
-    years_months_days = []
-    sample_newspapers = []
-    # first get a list of all the file dates
-    for filename in os.listdir(path_to_newspapers):
-        # double check that these are text files
-        if filename.endswith(".txt"):
-            newspaper_date = filename.split(".txt")[0]
-            try:
-                years_months_days.append(tuple(newspaper_date.split("-")))
-            except Exception as e:
-                print(f"File {newspaper_date} is not formatted properly. Files should look like: YYYY-MM-DD.txt")
-    # get random days of each month
-    years = [date[0] for date in years_months_days]
-    unique_years = list(set(years))
-    months = [date[1] for date in years_months_days]
-    unique_months = list(set(months))
-
-    for unique_year in unique_years:
-        for unique_month in unique_months:
-            days_in_month = [date[2] for date in years_months_days if (date[1] == unique_month) and (date[0] == unique_year)]
-            try:
-                selected = random.sample(days_in_month, sample_number)
-            # a ValueError indicates that there weren't enough newspaper dates in the corpus,
-            # and that the sample number provided is greater than the amount of issues
-            # for those months and years
-            except ValueError():
-                while sample_number > 0:
-                    sample_number -= 1
-                    try:
-                        selected = random.sample(days_in_month, sample_number)
-                    except ValueError():
-                        continue
-            for date in selected:
-                new_date = f"{unique_year}-{unique_month}-{date}.txt"
-                # print(new_date)
-                sample_newspapers.append(new_date)
-    return sample_newspapers
 
 ### Function to save the dataframe to a csv file.
 ### It requires the dataframe to save, the path to save it to,
@@ -112,39 +69,3 @@ def documents_as_sentences_to_documents_as_words(df):
     df = pd.DataFrame(word_tokenized_corpus_as_dictionary)
     print("\n[-] Completed transforming dataframe into word-based tidy text format")
     return df
-
-### Takes in a path and returns a list of tuples in the format (FILE_NAME, TEXT)
-def import_corpus_from_path(path):
-    list_of_filenames_and_dirty_texts = []
-    for file_name in os.listdir(path):
-        # double check that these are text files
-        if file_name.endswith(".txt"):
-            with codecs.open(path + file_name, 'r', encoding='utf-8', errors="ignore") as raw_text:
-                dirty_text = raw_text.read()
-            standardized_file_name = file_name.replace(" ", "_")
-            list_of_filenames_and_dirty_texts.append((standardized_file_name, dirty_text))
-    return list_of_filenames_and_dirty_texts
-
-### Imports a corpus from a path and a list of file_names
-def import_corpus_from_path_and_file_names(path, file_names):
-    list_of_filenames_and_dirty_texts = []
-    for file_name in file_names:
-        with codecs.open(path + file_name, 'r', encoding='utf-8', errors="ignore") as raw_text:
-            dirty_text = raw_text.read()
-        standardized_file_name = file_name.replace(" ", "_")
-        list_of_filenames_and_dirty_texts.append((standardized_file_name, dirty_text))
-    return list_of_filenames_and_dirty_texts
-
-### Imports multiple corpora (both novels and newspapers) by using a list of paths
-### and an optional list_of_sample_newspapers. If a list of samples is provided,
-### the function will return only those files listed
-def import_corpora(paths_to_corpora, list_of_sample_newspapers=None):
-    dirty_texts = []
-    path_newspaper_corpus = paths_to_corpora[0]
-    path_novel_corpus = paths_to_corpora[1]
-    if list_of_sample_newspapers != None:
-        dirty_texts.append(import_corpus_from_path_and_file_names(path_newspaper_corpus, list_of_sample_newspapers))
-    else:
-        dirty_texts.append(import_corpus_from_path(path_newspaper_corpus))
-    dirty_texts.append(import_corpus_from_path(path_novel_corpus))
-    return dirty_texts
