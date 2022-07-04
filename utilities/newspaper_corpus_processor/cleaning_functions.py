@@ -6,6 +6,7 @@
 import codecs
 from nltk.tokenize import sent_tokenize
 import os
+# import numpy as np
 import pandas as pd
 import re
 import unicodedata
@@ -129,6 +130,25 @@ def clean_tokenized_list(sent_list):
         cleaned_tokenized_sentences.append(clean_set)
     return cleaned_tokenized_sentences
 
+
+### This function takes a list of filenames as output from transkribus and formats them to a more convenient date-format
+### that R can recognize during classification
+def transform_dates(file_names):
+    dates_change = {"JAN": "01", "FEB": "02", "MAR": "03", "APR": "04", "MAY": "05",
+    "JUN": "06", "JUL": "07", "AUG": "08", "SEP": "09", "OCT": "10", "NOV": "11", "DEC": "12"}
+    new_file_names = []
+    for file_name in file_names:
+        new_file_name = file_name.split("-")[1:3]
+        year = new_file_name[0]
+        month = new_file_name[1][:3]
+        formatted_month = dates_change.get(month)
+        day = new_file_name[1][3:]
+        new_file_name = f"{year}-{formatted_month}-{day}"
+        new_file_names.append(new_file_name)
+
+    return new_file_names
+
+
 ### This is the primary cleaning and preprocessing finction.
 ### It takes the output of input_corpus_of_txts() (a tuple of (FILE_NAME, TEXT)),
 ### applies preprocessing functions and outputs a pandas dataframe of the processed
@@ -145,7 +165,7 @@ def process_dirty_texts_to_df(corpora_of_filenames_and_dirty_texts):
             corpus_name = "Newspaper Corpus"
         elif index == 1:
             corpus_name = "Novels Corpus"
-        print(f"[?] There are {len(corpus)} texts to process in {corpus_name}")
+        print(f"[?] There are {len(corpus)} texts to process in {corpus_name}\n")
         for filename, dirty_text in corpus:
             progress(count, len(corpus))
             # preprocesses the text
@@ -169,7 +189,10 @@ def process_dirty_texts_to_df(corpora_of_filenames_and_dirty_texts):
             count += 1
         progress(100, 100)
     # each tuple element is assigned as a value in the empty dictionary defined above
-    cleaned_corpus_as_dictionary['file_names'] = [x[0] for x in cleaned_texts]
+    old_file_names = [x[0] for x in cleaned_texts]
+    # transform file names
+    new_file_names = transform_dates(old_file_names)
+    cleaned_corpus_as_dictionary['file_names'] = new_file_names
     cleaned_corpus_as_dictionary['sentences'] = [x[1] for x in cleaned_texts]
     cleaned_corpus_as_dictionary['relative_sentence_index'] = [x[2] for x in cleaned_texts]
     cleaned_corpus_as_dictionary['newspaper_0_novel_1'] = [x[3] for x in cleaned_texts]

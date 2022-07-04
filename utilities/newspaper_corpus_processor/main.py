@@ -14,7 +14,7 @@
 ### source .venv/bin/activate
 
 ### Remember to install requirments:
-### pip install -r requirements
+### pip install -r requirements.txt
 
 ### Remember to install python -m spacy download en_core_web_lg
 
@@ -25,14 +25,15 @@ from command_line import *
 
 ### Main program function, which outputs information as the program is running.
 def main():
+    
     # get command line configuration from command_line.py
     try:
         paths_to_corpora, path_to_spreadsheets, output_name = parser_setup()
+        list_of_sample_newspapers = None
     except Exception as e:
         
         paths_to_corpora, path_to_spreadsheets, output_name, sample_number = parser_setup()
         print("Creating sample files with {sample_number} issues per month")
-    if sample_number:
         list_of_sample_newspapers = get_sample_newspapers(paths_to_corpora[0], int(sample_number))
 
     dirty_texts = import_corpora(paths_to_corpora, list_of_sample_newspapers)

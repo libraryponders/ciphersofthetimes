@@ -1,5 +1,5 @@
 nltk==3.7
-numpy==1.22.3
+numpy
 pandas==1.4.2
 regex==2022.4.24
 spacy==3.3.0
