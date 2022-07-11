@@ -18,6 +18,10 @@
 
 ### Remember to install python -m spacy download en_core_web_lg
 
+### Remember to install nltk via python
+###   >>> import nltk
+###   >>> nltk.download('punkt')
+
 # project imports
 from cleaning_functions import *
 from pos_tagging_functions import *
@@ -25,7 +29,6 @@ from command_line import *
 
 ### Main program function, which outputs information as the program is running.
 def main():
-    
     # get command line configuration from command_line.py
     try:
         paths_to_corpora, path_to_spreadsheets, output_name = parser_setup()
@@ -46,10 +49,10 @@ def main():
     print("[+] Running POS tagging and integrating titles and names into single PROPNs...")
     df = pos_tag_texts_from_df_new(df, 'sentences')
     print("\n[-] Completed POS tagging.")
-    # print("\n[!] Dataframe head looks like this: ")
-    # print(f"First elements of sentences column: {df.head().sentences.values}")
-    # print(f"First elements of tagged_sentences column: {df.head().text_.values[0]}")
-    # print(f"First elements of pos_counts column: {df.head().tags_.values[0]}\n")
+    print("\n[!] Dataframe head looks like this: ")
+    print(f"First elements of sentences column: {df.head().sentences.values}")
+    print(f"First elements of tagged_sentences column: {df.head().text_.values[0]}")
+    print(f"First elements of pos_counts column: {df.head().tags_.values[0]}\n")
 
     # print("Now creating df with words as documents...")
     # df_words = documents_as_sentences_to_documents_as_words(df)

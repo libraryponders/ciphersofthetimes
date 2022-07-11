@@ -6,7 +6,6 @@
 import codecs
 from nltk.tokenize import sent_tokenize
 import os
-# import numpy as np
 import pandas as pd
 import re
 import unicodedata
@@ -21,10 +20,29 @@ regex_expressions = {"initials": r"\b([A-Z][.](\s)?)+", "prefixes": r"(Mr|St|Mrs
                      "addresses": "", "dates": "", "line_break": r"¬\n", "space": r"/s",\
                      "dashes": r"[-]+", "quote_marks": r"(“|”)", \
                      "months_abrv": r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[.](\s*(\d{1,2})(,|\.)?)?(\s*\d+)?",\
-                     "pennies": r"(\d+[.]?\s*)[d][.]", "months_and_years": r"\d{1,2}[.]\s*(\d{4})"}
+                     "pennies": r"(\d+[.]?\s*)[d][.]", "months_and_years": r"\d{1,2}[.]\s*(\d{4})",
+                     "project_gutenberg_beginning": r"((\s?\*\s?)+(.)*(start)(.)*(gutenberg)(.)*)",
+                     "project_gutenberg_end": r"((\s?\*\s?)+(.)*(end)(.)*(gutenberg)(.)*)"}
 
+### For standardizing filenames/dates
+dates_change = {"JAN": "01", "FEB": "02", "MAR": "03", "APR": "04", "MAY": "05",
+    "JUN": "06", "JUL": "07", "AUG": "08", "SEP": "09", "OCT": "10", "NOV": "11", "DEC": "12"}
 
-
+### Strips all the meta information and liscencing that project gutenberg adds
+def strip_gutenberg_related_text(text):
+    ## check for start gutenberg text
+    try:
+        split_text = re.split(regex_expressions["project_gutenberg_beginning"], text, maxsplit=2, flags=re.IGNORECASE)
+        new_text = split_text[1]    
+    except Exception:
+        new_text = text
+    ## check for end gutenberg text
+    try:
+        split_text = re.split(regex_expressions["project_gutenberg_end"], new_text, maxsplit=1, flags=re.IGNORECASE)
+        new_text = split_text[0]
+    except Exception:
+        pass
+    return new_text
 
 ### Strips all accented characters in the text
 def strip_accents(text):
@@ -65,6 +83,13 @@ def process_pennies(matchobj):
     text = process_periods(text)
     return text
 
+### Processes formatted quotation marks. Ex: (“|”)
+def process_quotes(matchobj):
+    text = matchobj.group(0)
+    text = re.sub(r"“","<open_quote>", text)
+    text = re.sub(r"”","<close_quote>", text)
+    return text
+
 ### This function calls all the preprocessing functions from above
 def preprocess_text(text, category=0):
     # newspapers
@@ -91,8 +116,15 @@ def preprocess_text(text, category=0):
         # strip all accents from the text:
     # category == 1 is novels
     else:
-        # only process titles for novels
+        # strip gutenberg info
+        text = strip_gutenberg_related_text(text)
+        # process only titles and quotations for novels
         text = re.sub(regex_expressions["prefixes"],"\\1<prd>", text, flags=re.IGNORECASE)
+        # process quotes - TODO!
+        # text = re.sub(regex_expressions["quote_marks"], process_quotes, text)
+
+    # remove all underscores
+    text = text.replace("_", "")
     # strip accents for all texts
     text = strip_accents(text)
     return text
@@ -118,7 +150,9 @@ def clean_tokenized_sent(sent):
     clean_sent = " ".join(split_sentence)
     # put back the periods:
     clean_sent = re.sub("<prd>", ".", clean_sent)
-    # clean_sent = clean_sent.lower()
+    # place quote back in - TODO!
+    # clean_sent = re.sub("<open_quote>", "<$", clean_sent)
+    # clean_sent = re.sub("<close_quote>", ">$", clean_sent)
     return clean_sent
 
 ### This function iterates through a sentence list and applies the "clean_tokenized_sent()"
@@ -131,23 +165,22 @@ def clean_tokenized_list(sent_list):
     return cleaned_tokenized_sentences
 
 
-### This function takes a list of filenames as output from transkribus and formats them to a more convenient date-format
+### This function takes a filename (output from transkribu) and formats it to a more convenient date-format
 ### that R can recognize during classification
-def transform_dates(file_names):
-    dates_change = {"JAN": "01", "FEB": "02", "MAR": "03", "APR": "04", "MAY": "05",
-    "JUN": "06", "JUL": "07", "AUG": "08", "SEP": "09", "OCT": "10", "NOV": "11", "DEC": "12"}
-    new_file_names = []
-    for file_name in file_names:
-        new_file_name = file_name.split("-")[1:3]
-        year = new_file_name[0]
-        month = new_file_name[1][:3]
-        formatted_month = dates_change.get(month)
-        day = new_file_name[1][3:]
-        new_file_name = f"{year}-{formatted_month}-{day}"
-        new_file_names.append(new_file_name)
+def transform_newspaper_title(file_name):
+    new_filename = file_name.split("-")[1:3]
+    year = new_filename[0]
+    month = new_filename[1][:3]
+    formatted_month = dates_change.get(month)
+    day = new_filename[1][3:]
+    new_filename = f"{year}-{formatted_month}-{day}"
+    return new_filename
 
-    return new_file_names
-
+def transform_novel_title(file_name):
+    file_name_list = file_name.split("_")
+    date = file_name_list.pop(-1).split(".")[0]
+    new_filename = "_".join(file_name_list)
+    return new_filename, date
 
 ### This is the primary cleaning and preprocessing finction.
 ### It takes the output of input_corpus_of_txts() (a tuple of (FILE_NAME, TEXT)),
@@ -165,7 +198,7 @@ def process_dirty_texts_to_df(corpora_of_filenames_and_dirty_texts):
             corpus_name = "Newspaper Corpus"
         elif index == 1:
             corpus_name = "Novels Corpus"
-        print(f"[?] There are {len(corpus)} texts to process in {corpus_name}\n")
+        print(f"\n[?] There are {len(corpus)} texts to process in {corpus_name}\n")
         for filename, dirty_text in corpus:
             progress(count, len(corpus))
             # preprocesses the text
@@ -180,8 +213,14 @@ def process_dirty_texts_to_df(corpora_of_filenames_and_dirty_texts):
             # iterate over every individual sentence within the cleaned and tokenized sentence
             # (each sentence in a single document)
             for clean_tokenized_sentence in cleaned_tokenized_sentences:
+                if index == 0:
+                    # if this is the newspaper corpus, transform the dates to R-readable format
+                    date = transform_newspaper_title(filename)
+                    new_filename = filename
+                elif index == 1:
+                    new_filename, date = transform_novel_title(filename)
                 # creates a tuple of all the information we'd like to see in the dataframe
-                tupled_files = (filename, clean_tokenized_sentence, relative_sentence_index, index)
+                tupled_files = (new_filename, date, clean_tokenized_sentence, relative_sentence_index, index)
                 # adds them to our empty list above (cleaned_texts)
                 cleaned_texts.append(tupled_files)
                 # increments the relative sentence index
@@ -189,13 +228,11 @@ def process_dirty_texts_to_df(corpora_of_filenames_and_dirty_texts):
             count += 1
         progress(100, 100)
     # each tuple element is assigned as a value in the empty dictionary defined above
-    old_file_names = [x[0] for x in cleaned_texts]
-    # transform file names
-    new_file_names = transform_dates(old_file_names)
-    cleaned_corpus_as_dictionary['file_names'] = new_file_names
-    cleaned_corpus_as_dictionary['sentences'] = [x[1] for x in cleaned_texts]
-    cleaned_corpus_as_dictionary['relative_sentence_index'] = [x[2] for x in cleaned_texts]
-    cleaned_corpus_as_dictionary['newspaper_0_novel_1'] = [x[3] for x in cleaned_texts]
+    cleaned_corpus_as_dictionary['file_names'] = [x[0] for x in cleaned_texts]
+    cleaned_corpus_as_dictionary['text_dates'] = [x[1] for x in cleaned_texts]
+    cleaned_corpus_as_dictionary['sentences'] = [x[2] for x in cleaned_texts]
+    cleaned_corpus_as_dictionary['relative_sentence_index'] = [x[3] for x in cleaned_texts]
+    cleaned_corpus_as_dictionary['newspaper_0_novel_1'] = [x[4] for x in cleaned_texts]
 
     # create df from dictionary
     df = pd.DataFrame(cleaned_corpus_as_dictionary)

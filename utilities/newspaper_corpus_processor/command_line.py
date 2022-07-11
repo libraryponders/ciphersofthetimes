@@ -1,5 +1,6 @@
 # imports
 import sys
+import os
 import argparse
 
 def parser_setup():
@@ -9,12 +10,16 @@ def parser_setup():
     ### are the variables that should be used while running from within the github
     ### folder. 
     output_name = "test"
-    path_to_newspapers = "../../../GitHub/ciphersofthetimes/data/corpora/newspapers_test/"
-    # path_to_newspapers = "../../data/corpora/newspapers_test/"
-    path_to_novels = "../../../GitHub/ciphersofthetimes/data/corpora/corpus_newspaper_novels_test/"
-    # path_to_novels = "../../data/corpora/corpus_newspaper_novels/"
-    path_to_spreadsheets = "../../../GitHub/ciphersofthetimes/data/spreadsheets/tests/"
-    # path_to_spreadsheets = "../../data/spreadsheets/"
+    # path_to_newspapers = "../../../GitHub/ciphersofthetimes/data/corpora/newspapers_test/"
+    # path_to_newspapers = "tests/newspapers_test/"
+    path_to_newspapers = "/home/lyre/git_projects/work/ciphersofthetimes/data/corpora/newspapers_test/"
+    # path_to_novels = "../../../GitHub/ciphersofthetimes/data/corpora/corpus_newspaper_novels_dated/"
+    # path_to_novels = "tests/novels_test/"
+    path_to_novels = "/home/lyre/git_projects/work/ciphersofthetimes/data/corpora/corpus_newspaper_novels_dated/"
+    # path_to_spreadsheets = "../../../GitHub/ciphersofthetimes/data/spreadsheets/tests/"
+    path_to_spreadsheets = "tests/spreadsheets_test/"
+
+   
     
     if len(sys.argv) == 1:
         print(f"No arguments were provided. \nUsage: {usage_description}")
@@ -32,7 +37,7 @@ def parser_setup():
     parser.add_argument("-d", "--default", nargs='?', help = "use all default values for input and output files")
     parser.add_argument("-s", "--sample", nargs=1, help = "takes a number and returns a sample of texts from the corpus")
     args = parser.parse_args()
-
+    os.system("clear")
     print("[+] Starting the CoTT (ciphers of _The Times_) corpus processor...")
     # getting user input
     if args.default:
