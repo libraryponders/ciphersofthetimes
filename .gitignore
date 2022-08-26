@@ -7,3 +7,15 @@ data/spreadsheets/individual_novels/df_Armadale_full.csv
 data/.DS_Store
 data/.DS_Store
 *.icloud
+.ipynb*
+utilities/analysis_of_first_and_sencond_half_acs/data
+utilities/analysis_of_first_and_sencond_half_acs/logs
+utilities/analysis_of_first_and_sencond_half_acs/logs
+utilities/analysis_of_first_and_sencond_half_acs/~$mmary_differences_df_1_and_df_2.docx
+utilities/analysis_of_first_and_sencond_half_acs/summary_differences_df_1_and_df_2.docx
+data/spreadsheets/tests/arm_1_full.csv
+data/spreadsheets/tests/arm_1_meta.csv
+data/spreadsheets/tests/test_full.csv
+data/spreadsheets/tests/test_meta.csv
+data/spreadsheets/tests/test_words_full.csv
+data/.DS_Store
