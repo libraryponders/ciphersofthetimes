@@ -15,7 +15,7 @@ def parser_setup():
     path_to_newspapers = "/home/lyre/git_projects/work/ciphersofthetimes/data/corpora/newspapers_test/"
     # path_to_novels = "../../../GitHub/ciphersofthetimes/data/corpora/corpus_newspaper_novels_dated/"
     # path_to_novels = "tests/novels_test/"
-    path_to_novels = "/home/lyre/git_projects/work/ciphersofthetimes/data/corpora/corpus_newspaper_novels_dated/"
+    path_to_novels = "/home/lyre/git_projects/work/ciphersofthetimes/data/corpora/corpus_newspaper_novels_dated_edited/"
     # path_to_spreadsheets = "../../../GitHub/ciphersofthetimes/data/spreadsheets/tests/"
     path_to_spreadsheets = "tests/spreadsheets_test/"
 
