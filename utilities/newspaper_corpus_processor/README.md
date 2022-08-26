@@ -10,15 +10,13 @@ classification model.
 
 ## Usage/Examples
 
-```python3 ./main.py -i <PATH_TO_CORPUS> -o <PATH_TO_OUTPUT_FOLDER> -n <OUTPUT_FILE_NAME>```
+```python3 ./main.py -inews <PATH_TO_NEWSPAPER_CORPUS> -inovs <PATH_TO_NOVELS_CORPUS> -o <PATH_TO_OUTPUT_FOLDER> -n <OUTPUT_FILE_NAME>```
 
 This is best used within a python3 virtual enviroment.
 To set up, run the following commands inside the main folder:
 
 
 `python3 -m venv .venv`
-
-
 
 `source .venv/bin/activate`
 

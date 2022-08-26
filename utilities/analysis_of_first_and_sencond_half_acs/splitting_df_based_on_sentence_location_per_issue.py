@@ -69,6 +69,7 @@ for file_name in file_names_and_indexes.keys():
 # split df into two based on the above tags
 news_df_first_half = df[df['df_1_or_2'] == 1]
 news_df_second_half = df[df['df_1_or_2'] == 2]
+
 # generate reports for both dataframes
 dfs = []
 dfs.append(news_df_first_half)
