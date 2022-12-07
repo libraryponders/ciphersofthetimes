@@ -1,4 +1,4 @@
-<img src="assets/images/logo_rectangle.png" width="400" height="200" /> 
+<img src="assets/images/logo_rectangle.png" width="500" height="200" /> 
 
 # Ciphers of _The Times_ - Computational Analysis of Newspapers and Newspaper Novels from 19th-century Britian
 
