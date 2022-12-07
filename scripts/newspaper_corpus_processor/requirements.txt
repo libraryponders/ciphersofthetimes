@@ -1,0 +1,6 @@
+nltk==3.7
+numpy
+pandas
+regex==2022.4.24
+spacy==3.3.0
+en-core-web-lg @ https://github.com/explosion/spacy-models/releases/download/en_core_web_lg-3.3.0/en_core_web_lg-3.3.0-py3-none-any.whl
