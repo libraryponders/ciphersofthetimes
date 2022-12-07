@@ -51,7 +51,7 @@ at McGill University Library in 2023.
 
 ## Repo Authors
 
-- Ronny Litvack-Katzman (https://github.com/ronny-lk)
+- [Ronny Litvack-Katzman](https://github.com/ronny-lk)
 - Leehu Ben Sigler
 - Lillian Simons
 
@@ -68,6 +68,6 @@ at McGill University Library in 2023.
 
 ## Acknowledgements
 
-Archival image files of _The Times_ were sourced through _The Times_ Digital Archive, a Gale-Cengage resource. Optical character recognition (OCR), a process of image-to-text conversion used for newspaper pre-processing, was completed using Transkribus and with generous support from READ-COOP. We would like to offer thanks to Gallica (Jean-Philippe Moreux) for consulting on data extraction. Data on the Victorian novels was sourced from Project Gutenberg, txtlab's NOVEL450 data set, and HUM19UK. 
+Archival image files of _The Times_ were sourced through [_The Times_ Digital Archive](https://www.gale.com/intl/c/the-times-digital-archive), a Gale-Cengage resource. Optical character recognition (OCR), a process of image-to-text conversion used for newspaper pre-processing, was completed using [Transkribus](https://readcoop.eu/transkribus/) and with generous support from READ-COOP. We would like to offer thanks to [Gallica](https://gallica.bnf.fr/) (Jean-Philippe Moreux) for consulting on data extraction. Data on the Victorian novels was sourced from Project Gutenberg, txtlab's [NOVEL450](https://txtlab.org/data-sets/) data set, and [HUM19UK](https://www.linguisticsathuddersfield.com/hum19uk-corpus). 
  
  *** This project is funded by the Social Sciences and Humanities Research Council of Canada.
