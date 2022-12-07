@@ -1,7 +1,0 @@
-### Installs:
-# conda install -c plotly plotly=5.7.0
-# !pip install spacy
-# !pip install plotly==5.7.0
-# import nltk
-# nltk.download('punkt')
-# !python3 -m spacy download en_core_web_sm
