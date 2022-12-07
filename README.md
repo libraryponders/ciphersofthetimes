@@ -1,6 +1,5 @@
 
-![Logo](https://libraryponders.github.io/assets/img/ciphers_logo_small.png)
-
+![Logo](assets/images/ciphers_logo_small.png)
 
 # Ciphers of _The Times_ - Computational Analysis of Newspapers and Newspaper Novels from 19th-century Britian
 
