@@ -1,4 +1,4 @@
-# PACKAGES ####
+# PACKAGES ---------------------------------------------------------------------
 
 library(tidyverse)
 library(textrecipes)
@@ -11,10 +11,9 @@ library(coop)
 library(glmnet)
 library(vip)
 
-# DATA INPUT ####
-setwd("~/Desktop/R") #set working directory
-#input data
-corpus_output <- read_csv("Data Input/libponders_meta.csv")
+# DATA INPUT -------------------------------------------------------------------
+
+corpus_output <- read_csv("corpora/processed_corpus_meta.csv") #input data
 
 corpus_output <- corpus_output %>%
   rename(index = "...1", #rename columns
@@ -36,7 +35,7 @@ glimpse(corpus_output) #check columns headers
   corpus_output$text <- gsub('Sec. ','Sec.',corpus_output$text)
   corpus_output$text <- gsub('Secretar. ','Secretar.',corpus_output$text)}
 
-#remove any double spaces between in text and tags 
+#remove any double spaces in between text and tags 
 corpus_output <- corpus_output %>% 
   mutate(text = str_replace_all(text, "  ", " ")) %>% 
   mutate(tag = str_replace_all(tag, "  ", " "))
@@ -52,20 +51,19 @@ corpus2class <- corpus_output %>%
   corpus2class$source <- ifelse(corpus2class$corpus == "newspaper", NA, corpus2class$source)
   corpus2class$news_novel <- ifelse(corpus2class$corpus == "newspaper", NA, corpus2class$news_novel)}
 
-# FILTERING ####
-titles <- corpus2class %>%
+# FILTERING --------------------------------------------------------------------
+titles <- corpus2class %>% #filter title names
   filter(corpus == "novel") %>%
   group_by(pub_year, news_novel) %>%
   mutate(title = str_replace_all(file_name, "_", " ")) %>% 
   mutate(title = str_replace_all(title, ".txt", "")) %>% 
   summarise(title = unique(title))
-titles$pub_year <- as.numeric(titles$pub_year)
+titles$pub_year <- as.numeric(titles$pub_year) #year from character to numeric
 
 #cast as tidy, tokenized data frame
-#newspaper corpus
-newspaper_output_tidy <- corpus2class %>%
+newspaper_output_tidy <- corpus2class %>% #newspaper corpus
   filter(corpus == "newspaper") %>%
-  pivot_longer(cols = 10:11,
+  pivot_longer(cols = 10:11, #split text from feature
                names_to = "feature",
                values_to = "text") %>%
   unnest_tokens(text, 
@@ -82,9 +80,8 @@ newspaper_output_tidy$year <- #format year column to an object of date class
   format(as.Date(newspaper_output_tidy$pub_year,
                  format="%Y-%m-%d"),
          "%Y")
-nrow(newspaper_output_tidy) #count the number of words in the newspaper corpus
 
-mistagged_sentences_news <- newspaper_output_tidy %>% #save mistagged sentences as a list
+mistagged_sentences_news <- newspaper_output_tidy %>% #save mis-tagged sentences as a list
   filter(tag == "x" |
            is.na(tag)) %>% #filter for words/phrases where POS tagging failed ('x' tagged or NA)
   as.list(index) #add to list object
@@ -93,38 +90,13 @@ mistagged_sentences_news <- newspaper_output_tidy %>% #save mistagged sentences 
 corpus2class_clean <- corpus2class[ ! corpus2class$index %in% #remove sentences based on index value
                                       mistagged_sentences_news$index, ]
 
-mistagged_sentences_news %>% #count number of tags lost from newspaper corpus
-  as.data.frame() %>%
-  summarize(count(unique(index)))
-
-mistagged_sentences_news %>% #count number of sentences lost from newspaper corpus
-  as.data.frame() %>%
-  n_distinct(index)
-
-newspaper_output_tidy_clean <- newspaper_output_tidy[ ! newspaper_output_tidy$index %in% #remove sentences based on index value
+newspaper_output_tidy_clean <- newspaper_output_tidy[ ! newspaper_output_tidy$index %in% #remove sentences with at least one mis-tagged word based on index value
                                                         mistagged_sentences_news$index, ]
-
-pos_stats_news <- newspaper_output_tidy_clean %>% #summarize 
-  group_by(tag, year) %>%
-  summarise(count=n())
-
-tot_tags_news <- pos_stats_news %>%
-  group_by(year) %>%
-  summarise(year_tot = sum(count))
-
-pos_stats_news <- full_join(tot_tags_news,
-                            pos_stats_news,
-                            by = c("year"))
-
-pos_stats_news <- pos_stats_news %>%
-  mutate(prop = ((count/year_tot) * 100))
-
-write.csv(pos_stats_news,"/Users/digitalhumanities/Documents/R/App-1/data/pos_stats_news.csv", row.names = FALSE) #write output to App-1
 
 #novel corpus
 novel_output_tidy <- corpus2class %>%
   filter(corpus == "novel") %>%
-  pivot_longer(cols = 10:11,
+  pivot_longer(cols = 10:11, #split text from feature
                names_to = "feature",
                values_to = "text") %>%
   unnest_tokens(text, 
@@ -137,100 +109,44 @@ novel_output_tidy <- corpus2class %>%
               values_from = text) %>%
   select(-row)
 
-nrow(novel_output_tidy) #count the number of words in the novel corpus
-
-mistagged_sentences_nov <- novel_output_tidy %>% #save mistagged sentences as a list
+mistagged_sentences_nov <- novel_output_tidy %>% #save mis-tagged sentences as a list
   filter(tag == "x" |
            is.na(tag)) %>% #filter for words/phrases where POS tagging failed ('x' tagged)
   as.list(index) #add to list object
 
-#remove sentences with at least one mistagged word
-corpus2class_clean <- corpus2class[ ! corpus2class$index %in% #remove sentences based on index value
+corpus2class_clean <- corpus2class[ ! corpus2class$index %in% #remove sentences with at least one mis-tagged word based on index value
                                       mistagged_sentences_nov$index, ]
-
-corpus2class_clean %>%
-  filter(tag == "x" |
-           is.na(tag))  #check that sentences have been removed
-
-mistagged_sentences_nov %>% #count number of sentences lost from newspaper corpus
-  as.data.frame() %>%
-  n_distinct(index)
 
 novel_output_tidy_clean <- novel_output_tidy[ ! novel_output_tidy$index %in% #remove sentences based on index value
                                                 mistagged_sentences_nov$index, ]
 
-#novel_output_tidy_clean <- novel_output_tidy %>%
-#  filter(!tag == "x") %>%
-#  drop_na()
-
-pos_stats_nov <- novel_output_tidy_clean %>%
-  group_by(tag) %>%
-  summarise(count=n())
-
-tot_tags_nov <- pos_stats_nov %>%
-  summarise(year_tot = sum(count))
-tot_tags_nov <- as.numeric(tot_tags_nov)
-
-pos_stats_nov <- pos_stats_nov %>%
-  mutate(prop = ((count/tot_tags_nov) * 100))
-
-write.csv(pos_stats_nov,"/Users/digitalhumanities/Documents/R/App-1/data/pos_stats_nov.csv", row.names = FALSE)
-
-pos_stats_nov_all <- novel_output_tidy_clean %>%
-  group_by(tag,file_name, pub_year, author) %>%
-  summarise(count=n())
-
-tot_tags_nov_all <- pos_stats_nov_all %>%
-  group_by(file_name) %>%
-  summarise(nov_tot = sum(count))
-
-pos_stats_nov_all <- full_join(tot_tags_nov_all,
-                               pos_stats_nov_all,
-                               by = c("file_name"))
-
-pos_stats_nov_all <- pos_stats_nov_all %>%
-  mutate(prop = ((count/nov_tot) * 100))
-
-pos_stats_nov_all <- pos_stats_nov_all %>% 
-  mutate(title = str_replace_all(file_name, "_", " ")) %>% 
-  mutate(title = str_replace_all(title, ".txt", ""))
-
-write.csv(pos_stats_nov_all,"/Users/digitalhumanities/Documents/R/App-1/data/pos_stats_nov_all.csv", row.names = FALSE)
-
-#check for comparability between corpora
-corpus2class_clean %>%
-  group_by(corpus) %>%
-  count()
-
 nrow(corpus2class) - nrow(corpus2class_clean) #total number of sentences removed after filtering
 
-remove(mistagged_sentences_news, mistagged_sentences_nov,
-       tot_tags_news, tot_tags_nov_all,
-       pos_stats_news, pos_stats_nov, pos_stats_nov_all)
+remove(mistagged_sentences_news, mistagged_sentences_nov)
 
-# CLASSIFICATION MODEL####
+# CLASSIFICATION MODEL ---------------------------------------------------------
 
 #split data into training and testing sets
-`500k_newspaper` <- corpus2class_clean[sample(which(corpus2class_clean$corpus == "newspaper"),500000),] #500k random sentence sample from newspaper corpus
-`500k_novel` <- corpus2class_clean[sample(which(corpus2class_clean$corpus == "novel"), 500000),] #500k random sample from novel corpus
+`500k_newspaper` <- corpus2class_clean[sample(which(corpus2class_clean$corpus == "newspaper"),
+                                              500000),] #500k random sentence sample from newspaper corpus
+`500k_novel` <- corpus2class_clean[sample(which(corpus2class_clean$corpus == "novel"), 
+                                          500000),] #500k random sample from novel corpus
 
 corpus_1M <- bind_rows(`500k_novel`,
-                       `500k_newspaper`)
+                       `500k_newspaper`) #1M sentence corpus
 
 corpus_split <- initial_split(corpus_1M,
                               strata = corpus,
                               prop = 0.8) #80/20 training-testing split
 
 corpus_train <- training(corpus_split) #create training data frame
-dim(corpus_train)
 corpus_test <- testing(corpus_split) #create testing data frame
-dim(corpus_test)
 
 corpus_folds <- vfold_cv(corpus_train,
                          v = 10) #set training set to be used for cross-validation, defaults to ten folds
 corpus_folds #check
 
-#set tuning lasso hyperparameters
+#set tuning lasso hyper-parameters
 tune_spec <- logistic_reg(penalty = tune(), 
                           mixture = 1) %>%
   set_mode("classification") %>%
@@ -241,7 +157,7 @@ project_rec_2feat <- #define formula for classification model and data frame
   recipe(corpus ~ text + tag,
          data = corpus_train)
 
-project_rec_2feat_ngrams <- project_rec_2feat %>%
+project_rec_2feat_ngrams <- project_rec_2feat %>% #add tokenizing steps to recipe
   step_tokenize(text:tag,
                 columns = c("text", "tag"),
                 token = "words") %>% #tokenize
@@ -255,15 +171,16 @@ project_rec_2feat_ngrams <- project_rec_2feat %>%
   step_tfidf(text:tag,
              columns = c("text", "tag")) 
 
-project_rec_2feat <- project_rec_2feat %>%
-  step_tokenize(text:tag,
-                columns = c("text", "tag"),
-                token = "words") %>% #tokenize
-  step_tokenfilter(text:tag,
-                   columns = c("text", "tag"),
-                   max_tokens = 1e3) %>% #override filter that limits the number of unique sentences
-  step_tfidf(text:tag,
-             columns = c("text", "tag")) #%>% 
+#the following recipe can be used, whihc performs classification without n_grams
+# project_rec_2feat <- project_rec_2feat %>%
+#   step_tokenize(text:tag,
+#                 columns = c("text", "tag"),
+#                 token = "words") %>% #tokenize
+#   step_tokenfilter(text:tag,
+#                    columns = c("text", "tag"),
+#                    max_tokens = 1e3) %>% #override filter that limits the number of unique sentences
+#   step_tfidf(text:tag,
+#              columns = c("text", "tag")) #%>% 
 
 set.seed(234)
 
@@ -273,18 +190,17 @@ more_vars_wf <- workflow() %>%
   add_model(tune_spec)
 more_vars_wf #check workflow steps: tokenize, ngram, filter, tidy
 
-more_vars_rs <- tune_grid(
+more_vars_rs <- tune_grid( #compute a set of performance metrics on re-samples
   more_vars_wf,
-  corpus_folds)
+  corpus_folds) 
 
 more_vars_rs %>% 
-  show_best("roc_auc")
+  show_best("roc_auc") #check for best ROC
 
-chosen_auc <- more_vars_rs  %>%
+chosen_auc <- more_vars_rs  %>% #select and define ROC by penalty
   select_by_one_std_err(metric = "roc_auc", -penalty)
-chosen_auc
 
-finalize_workflow(more_vars_wf,
+finalize_workflow(more_vars_wf,#finalize workflow with selected ROC
                   select_best(more_vars_rs, "roc_auc")) %>% 
   fit(corpus_train) %>% 
   extract_fit_parsnip() %>% 
@@ -295,93 +211,60 @@ finalize_workflow(more_vars_wf,
 
 final_grid <- grid_regular(
   penalty(range = c(-4, 0)),
-  #max_tokens(range = c(1e3, 3e3)),
-  levels = c(penalty = 20 #max_tokens = 3
-  )
-)
-final_grid
+  levels = c(penalty = 20))
 
 set.seed(2022)
-tune_rs <- tune_grid(
+tune_rs <- tune_grid( #compute a set of performance metrics on re-samples after tuning
   more_vars_wf,
   corpus_folds,
   grid = final_grid,
   metrics = metric_set(accuracy, sensitivity, specificity))
 
-autoplot(tune_rs) +
-  labs(
-    color = "Number of tokens",
-    title = "Model performance across regularization penalties and tokens",
-    subtitle = paste("We can choose a simpler model with higher regularization")
-  )
-
 choose_acc <- tune_rs %>%
   select_by_pct_loss(metric = "accuracy", -penalty)
-choose_acc
 
-final_wf <- finalize_workflow(more_vars_wf, choose_acc)
-final_wf
+final_wf <- finalize_workflow(more_vars_wf, choose_acc) #finalize workflow
 
 final_fitted <- last_fit(final_wf, corpus_split)
 collect_metrics(final_fitted)
 
-collect_predictions(final_fitted) %>%
+collect_predictions(final_fitted) %>% #plot classification results
   conf_mat(truth = corpus, estimate = .pred_novel) %>%
   autoplot(type = "heatmap")
 
-classification_result <- 
+classification_result <- #results to data frame
   final_fitted %>%
   extract_fit_parsnip() %>%
   tidy() %>%
   arrange(-estimate)
 
-corpus_imp <- extract_fit_parsnip(final_fitted$.workflow[[1]]) %>%
+corpus_imp <- extract_fit_parsnip(final_fitted$.workflow[[1]]) %>% #extract model features by importance
   vi(lambda = choose_acc$penalty)
 
 corpus_imp$Importance <- ifelse(corpus_imp$Sign == "NEG", -1*corpus_imp$Importance, corpus_imp$Importance)
 
-# corpus_imp %>%
-#   mutate(
-#     Sign = case_when(Sign == "POS" ~ "More novel",
-#                      Sign == "NEG" ~ "More newspaper"),
-#     #Importance = abs(Importance),
-#     Variable = str_remove_all(Variable, "tfidf_"),
-#   ) %>%
-#   group_by(Sign) %>%
-#   top_n(50, Importance) %>%
-#   ungroup %>%
-#   ggplot(aes(x = Importance,
-#              y = fct_reorder(Variable, Importance),
-#              fill = Sign)) +
-#   geom_col(show.legend = FALSE) +
-#   scale_x_continuous(expand = c(0, 0)) +
-#   facet_wrap(~Sign, scales = "free") +
-#   labs(
-#     y = NULL,
-#     title = "Variable importance for predicting the corpus of a sentence",
-#     subtitle = paste0("These features are the most important in predicting",
-#                       "whether a sentence is from a newspaper or a novel")
-#   )
-
-corpus_imp <- corpus_imp %>% 
+corpus_imp <- corpus_imp %>%  #rewrite column variables and observations
   mutate(str = str_remove_all(Variable, "tfidf_")) %>% 
   mutate(reshape2::colsplit(str, '_', names =  c('feature_type','feature'))) %>% 
   mutate(corpus = case_when(Sign == "POS" ~ "more novel",
                             Sign == "NEG" ~ "more newspaper"))
 
-more_news <- corpus_imp %>%
+# Select top model features
+# Here, the top 25 terms are chosen, but the number of top terms can be changed 
+# The number of top terms will be x-1, where x is here 26
+
+more_news <- corpus_imp %>% #more newspaper
   filter(!between(dense_rank(Importance), 26, n() - 26))
-more_nov <- corpus_imp %>%
+more_nov <- corpus_imp %>% #more novel
   filter(!between(dense_rank(desc(Importance)), 26, n() -26))
 
 top_model_terms <- bind_rows(more_news,
                              more_nov)
 
-write.csv(top_model_terms,"/Users/digitalhumanities/Documents/R/App-1/data/top_model_terms.csv", row.names = FALSE)
-
 corpus_bind <- collect_predictions(final_fitted) %>%
-  bind_cols(corpus_test %>% select(-corpus))
+  bind_cols(corpus_test %>% select(-corpus)) #join corpus to model predictions
 
+#See mis-classified sentences, here defined as those with probability less than 20%
 misclass_nov <- corpus_bind %>%
   filter(corpus == "novel", .pred_novel < 0.2) %>%
   select(text) %>%
@@ -392,7 +275,7 @@ misclass_news <- corpus_bind %>%
   select(text) %>%
   slice_sample(n = 1000)
 
-#PROBABILITY ANALYSIS ####
+# PROBABILITY ANALYSIS ----------------------------------------------------------
 
 `500k_novel`$tag <- tolower(`500k_novel`$tag) #make all tags lowercase for comparison to model
 `500k_novel`$tag <- str_squish(`500k_novel`$tag)
@@ -418,6 +301,8 @@ top_tag_nov <- as.data.frame(top_tag_nov$feature)
 colnames(top_tag_nov)[1] <- "feature"
 top_tag_nov <- top_tag_nov %>% 
   mutate(score_tag = 1)
+
+  #NOVELS
 
 scores_nov_text <- `500k_novel` %>% 
   rowid_to_column() %>% 
@@ -447,8 +332,7 @@ scores_nov_tag <- scores_nov_tag %>%
             scores_tag_nov = sum(score_tag, 
                                  na.rm = TRUE),
             .groups = "keep") %>% # where score = number of top features in a given sentence
-  ungroup() #%>% 
-#na.omit()
+  ungroup()
 
 scores_nov <- full_join(scores_nov_text, 
                         scores_nov_tag, )
@@ -465,7 +349,7 @@ sentence_scores_nov <- `500k_novel` %>%
   rename(tag = tag.x,
          tag_bigram = tag.y)
 
-#NEWS
+  #NEWS
 
 top_features_news <- corpus_imp %>% 
   filter(Sign == "NEG") %>% 
@@ -553,8 +437,6 @@ full_prob_meta <-
             titles,
             by = c("title", "pub_year", "news_novel"))
 
-write.csv(full_prob_meta,"/Users/digitalhumanities/Documents/R/App-1/data/full_prob_meta.csv", row.names = FALSE)
-
 news_titles <- full_prob_meta %>% 
   group_by(title, corpus, author, news_novel, pub_year) %>% 
   na.omit(prob_news2) %>% 
@@ -575,16 +457,12 @@ news_titles <-
             sentence_lengths,
             by = c("title"))
 
-write.csv(news_titles,"/Users/digitalhumanities/Documents/R/App-1/data/news_titles.csv", row.names = FALSE)
-
 nov_titles <- full_prob_meta %>% 
   group_by(title, pub_year, corpus, author, news_novel) %>%
   na.omit(prob_nov2) %>% 
   summarise(mean_nov = mean(prob_nov2))
 
-write.csv(nov_titles,"/Users/digitalhumanities/Documents/R/App-1/data/nov_titles.csv", row.names = FALSE)
-
-#### STATS
+# STATS ---------------------------------------------------------------------
 
 news_titles$date <- as.numeric(news_titles$date)
 
